@@ -1,0 +1,99 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNotAuth.cshtml";
+}
+@section AdditionalScripts{
+    <script>
+        $('#btnSignUpVisible').on('click', function () {
+            $('#divSignUp').removeClass('hidden');
+            $('#divSignIn').addClass('hidden');
+        });
+        $('#btnSignInVisible').on('click', function () {
+            $('#divSignUp').addClass('hidden');
+            $('#divSignIn').removeClass('hidden');
+        });
+    </script>
+}
+<div class="row" style="margin-top:5%">
+    <div class="col-lg-8 col-sm-12 mb-4">
+        <div class="card card-small card-post card-post--aside card-post--1">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a class="text-fiord-blue" href="#">TrackKnowledge API Test Platform</a>
+                </h5>
+                <p class="card-text d-inline-block mb-3">In order to test TrackKnowledge API Test Platform, you need to either sign in or sign up.</p>
+                <div class="row mb-3">
+                    <div class="col">
+                        <button type="button" class="mb-2 btn btn-sm btn-success mr-1" id="btnSignInVisible">Open Sign In Form</button>
+                        <button type="button" class="mb-2 btn btn-sm btn-danger mr-1" id="btnSignUpVisible">Open Sign Up Form</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden row" id="divSignIn">
+    <div class="col-lg-8 mb-4">
+        <div class="card card-small mb-4">
+            <div class="card-header border-bottom">
+                <h6 class="m-0">Sign In</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item p-3">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <strong class="text-muted d-block mb-2">Form</strong>
+                            <form method="post" action="@Url.Action("SignIn","Home")">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="txtSignInEmail" placeholder="Email Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="txtSignInPassword" placeholder="Password" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="mb-2 btn btn-sm btn-success mr-12" id="btnSignIn">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="hidden row" id="divSignUp">
+    <div class="col-lg-8 mb-4">
+        <div class="card card-small mb-4">
+            <div class="card-header border-bottom">
+                <h6 class="m-0">Sign Up</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item p-3">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <strong class="text-muted d-block mb-2">Form</strong>
+                            <form method="post" action="@Url.Action("SignUp","Home")">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" name="txtSignUpFirstName" placeholder="First name" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" name="txtSignUpLastName" placeholder="Last name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="txtSignUpEmail" placeholder="Email Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="txtSignUpPassword" placeholder="Password" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="mb-2 btn btn-sm btn-danger mr-12" id="btnSignUp">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

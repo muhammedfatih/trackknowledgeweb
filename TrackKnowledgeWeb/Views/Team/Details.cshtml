@@ -1,0 +1,38 @@
+﻿@model TrackKnowledgeWeb.Models.Team
+
+<div>
+    <h4>Team</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dt>
+            League
+        </dt>
+        <dt>
+            Country
+        </dt>
+        <dt>
+            Continent
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.League.Name)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.League.Country.Name)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.League.Country.Continent.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
