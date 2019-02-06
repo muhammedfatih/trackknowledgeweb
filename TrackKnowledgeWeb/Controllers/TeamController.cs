@@ -60,7 +60,7 @@ namespace TrackKnowledgeWeb.Controllers
             var request = new RestRequest(uri, Method.PUT);
             request.AddParameter("Authorization", string.Format("Bearer " + SessionManager.GetSession("api_key")), ParameterType.HttpHeader);
             request.AddParameter("name", team.Name);
-            request.AddParameter("league_id", team.League.Id);
+            request.AddParameter("leagueId", team.League.Id);
             IRestResponse response = Client.Execute(request);
             return RedirectToAction("Index", "Team");
         }
