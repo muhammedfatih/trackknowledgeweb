@@ -292,7 +292,6 @@
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Home\Activation.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
-    <Content Include="Views\Dashboard\Temp.cshtml" />
     <Content Include="Views\Continent\Index.cshtml" />
     <Content Include="Views\Continent\Details.cshtml" />
     <Content Include="Views\Continent\Edit.cshtml" />
