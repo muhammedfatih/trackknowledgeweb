@@ -12,7 +12,8 @@ Demo Site: https://www.trackknowledge.tk
 
 ## 2. TrackKnowledge Services
 
-Postman Collection: https://www.trackknowledge.tk/190206-TrackKnowledge.postman_collection.json
+Postman API Collection: https://www.trackknowledge.tk/190206-TrackKnowledge.postman_collection.json
+Postman Environment Collection: https://www.trackknowledge.tk/190206-TrackKnowledge.postman_environment.json
 
 ### 2.1. User API
 
